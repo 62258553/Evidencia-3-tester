@@ -1,0 +1,363 @@
+/*Estilos hechos por Gianluka Vazques , Jhonny Castillo , Juan Villegas*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: #FC990D;
+}
+
+body {
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+
+.nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+.nav li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+}
+
+.nav a {
+    padding: .5em .8em;
+    color: red (112, 4, 13, 0.5);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav a::before,
+.nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+.nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #db0000;
+    border-right: 3px solid #ce0b05;
+    transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #db0000;
+    border-left: 3px solid #db0000;
+    transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.nav a:hover {
+    color: #c51567;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    color: white;
+    font-size: 45px;
+}
+
+#imagen-menu {
+    width: 500px;
+}
+
+#play-button {
+    color: white;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-top: 32px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FC990D;
+    transition: all 0.5s;
+}
+
+#play-button:hover {
+    width: 225px;
+    color: white;
+    background-color: red;
+}
+
+.contenedor-historia {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#left-div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#left-div h1 {
+    color: rgb(204, 0, 0);
+}
+
+#left-div p {
+    color: white;
+    font-size: 22px;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+}
+
+#como-jugar-button {
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-top: 32px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FC990D;
+    transition: all 0.5s;
+}
+
+#como-jugar-button:hover {
+    background-color: #a81995;
+    width: 225px;
+}
+
+#right-div img {
+    width: 550px;
+    height: 400px;
+    margin: 3px;
+    margin-right: 10px;
+}
+
+#como-jugar {
+    height: 100vh;
+}
+
+#contenedor-rangos {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#contenedor-rangos>div {
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#jugar-button {
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-top: 32px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FC990D;
+    transition: all 0.5s;
+}
+
+#jugar-button:hover {
+    background-color: #44da17;
+    width: 225px;
+}
+
+
+/*Aqui va a ir el juego*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mega-contenedor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor2 {
+    position: relative;
+    border: solid 5px rgb(255, 255, 255);
+    width: 60%;
+    height: 80%;
+    background-image: url("img/fondo\ duckhunt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: AnimacionBordeMulticolor;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes AnimacionBordeMulticolor {
+    20% {
+        border: solid 5px rgb(255, 0, 0);
+    }
+    40% {
+        border: solid 5px rgb(255, 217, 0);
+    }
+    60% {
+        border: solid 5px rgb(115, 255, 0);
+    }
+    80% {
+        border: solid 5px rgb(0, 89, 255);
+    }
+    90% {
+        border: solid 5px rgb(255, 0, 212);
+    }
+}
+
+#patorobot {
+    background-image: url("img/patorobot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transition-delay: .5s;
+}
+
+#patorobot:active {
+    background-image: url("img/explosionanimada.gif");
+    transition-delay: 50ms;
+    /*aca retrasamos cuando aparezca la animacion de muerte*/
+}
+
+
+/*arma*/
+
+#arma-box {
+    position: fixed;
+    left: 80;
+    right: 120;
+    bottom: 0;
+    width: 180px;
+    height: 240px;
+    border: none;
+    background-image: url("img/frame_1.png");
+    background-size: contain;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    animation-name: armAnim;
+    animation-duration: 0.45s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+}
+
+@keyframes armAnim {
+    30% {
+        background-image: url("img/frame_2.png");
+    }
+    60% {
+        background-image: url("img/frame_3.png");
+    }
+    100% {
+        background-image: url("img/frame_1.png");
+    }
+}
+
+
+/*PESTAÑA POPUP*/
+
+.overlay {
+    /*position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;*/
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.resultados {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centrado {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.centrado>img {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 55px;
+}
+
+#puntos {
+    font-size: 45px;
+}
+
+#rango {
+    font-size: 45px;
+}
+
+#botonFinal {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    z-index: 100;
+}
